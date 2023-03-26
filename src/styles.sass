@@ -1,0 +1,1336 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap')
+
+:root
+    --dark: #1D1E25
+    --grey: #808d9e
+    --soft-grey: #F8F8F8
+    --silver: #E9ECF2
+    --white: #FFFFFF
+    --red: #ED2828
+    --cyan: #59C3FF
+    --yellow: #FFC046
+    --green: #48BD69
+    --tosca: #257CFF
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Urbanist', sans-serif
+
+html
+    font-size: 14px
+
+body
+
+h1
+    font-family: 'Urbanist'
+    font-style: normal
+    font-weight: 700
+    font-size: 36px
+    line-height: 110%
+h2
+    font-family: 'Urbanist'
+    font-style: normal
+    font-weight: 700
+    font-size: 32px
+    line-height: 38px
+h3
+    font-family: 'Urbanist'
+    font-style: normal
+    font-weight: 700
+    font-size: 24px
+    line-height: 30px
+
+@mixin big-title
+    font-family: 'Urbanist'
+    font-style: normal
+    font-weight: 700
+    font-size: 20px
+    line-height: 28px
+
+@mixin title
+    font-family: 'Urbanist'
+    font-style: normal
+    font-weight: 700
+    font-size: 16px
+    line-height: 20px
+
+@mixin caption
+    font-family: 'Urbanist'
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 24px
+
+.caption
+    @include caption
+
+@mixin big-button
+    font-family: 'Urbanist'
+    font-style: normal
+    font-weight: 700
+    font-size: 14px
+    line-height: 18px
+
+@mixin small-button
+    font-family: 'Urbanist'
+    font-style: normal
+    font-weight: 600
+    font-size: 12px
+    line-height: 16px
+
+@mixin paragraph
+    font-family: 'Urbanist'
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 22px
+
+@mixin text-button
+    font-family: 'Urbanist'
+    font-style: normal
+    font-weight: 400
+    font-size: 12px
+    line-height: 16px
+
+.splash
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 100vh
+    position: relative
+    &__logo
+    &__overlay
+        position: absolute
+        z-index: -1
+        bottom: 0
+
+.onboard
+    min-height: 100vh
+    position: relative
+    &__mockup
+        display: block
+        margin-left: auto
+    &__overlay
+        position: absolute
+        z-index: -1
+        right: 0
+        top: 0
+    &__details
+        position: absolute
+        bottom: 0
+        background: var(--tosca)
+        width: 375px
+        height: 328px
+        padding: 30px
+    &__logo
+        display: block
+        margin-left: auto
+        margin-right: auto
+    &__circle
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 0
+    &__title
+        color: var(--soft-grey)
+    &__paragraph
+        color: var(--soft-grey)
+        font-size: 16px
+        font-weight: 400
+        line-height: 24px
+        margin-top: 20px
+        margin-bottom: 40px
+        max-width: 265px
+    &__next
+        background: #FFFFFF
+        width: 56px
+        height: 56px
+        position: absolute
+        left: 288px
+        top: 698px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        cursor: pointer
+        transition: 0.2s
+        text-decoration: none
+        &:hover
+            transition: 0.2s
+            transform: scale(1.05)
+        &> i
+            color: var(--tosca)
+            font-size: 1.2rem
+
+.getstarted
+    min-height: 100vh
+    position: relative
+    &__coronavirus
+        display: block
+        position: absolute
+        top: 0
+    &__details
+        position: absolute
+        bottom: 0
+        background: var(--white)
+        width: 375px
+        height: 328px
+        padding: 30px
+    &__logo
+        display: block
+        margin-left: auto
+        margin-right: auto
+    &__title
+        color: var(--dark)
+        text-align: center
+    &__button
+        margin-top: 1rem
+    &__account
+        display: block
+        color: var(--grey)
+        margin-top: 20px
+        text-align: center
+        font-size: 16px
+        line-height: 20px
+        font-weight: 400
+        &> a
+            font-weight: 700
+            color: var(--tosca)
+            text-decoration: none
+
+.registration
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 24px
+    &__title
+    &__paragraph
+        margin-top: 8px
+        color: var(--grey)
+    &__button
+        display: flex
+        justify-content: center
+        align-items: center
+        text-decoration: none
+        gap: 2rem
+        margin-top: 25px
+        border: 1px solid var(--silver)
+        padding: 1rem
+        &> span
+            color: #2B3453
+            font-size: 14px
+            font-weight: 600
+            line-height: 16.71px
+    &__googleicon
+        width: 20px
+        height: 20px
+    &__or
+        position: relative
+        color: var(--grey)
+        font-size: 16px
+        line-height: 20px
+        text-align: center
+        margin-top: 18px
+        &::after
+            content: ""
+            position: absolute
+            top: 50%
+            right: 0
+            width: 145px
+            height: 2px
+            background: var(--silver)
+        &::before
+            content: ""
+            position: absolute
+            top: 50%
+            left: 0
+            width: 145px
+            height: 2px
+            background: var(--silver)
+
+.form
+    &__inputcon
+        position: relative
+    &__icon
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        color: var(--grey)
+    &__messages
+        display: flex
+        flex-direction: column
+        gap: 1rem
+        margin-top: 2rem
+    &__message
+        display: flex
+        gap: 1rem
+        color: var(--grey)
+        &> i.fa-x
+            color: var(--red)
+        &> i.fa-check
+            color: var(--green)
+
+    &__input
+        display: block
+        margin-left: auto
+        margin-right: auto
+        border: none
+        border-bottom: 1px solid var(--silver)
+        padding: 1rem
+        outline: none
+        font-size: 1rem
+        line-height: 22px
+        font-weight: 400
+        width: 100%
+        padding-left: 44px
+        margin-top: 1rem
+        color: #191A26
+        font-weight: 700
+        &::placeholder
+            font-weight: 400
+            color: var(--grey)
+    &__forgot
+        margin-left: auto
+        display: block
+        font-size: 14px
+        line-height: 18px
+        text-align: right
+        color: var(--tosca)
+        font-weight: 700
+        margin-top: 16px
+        text-decoration: none
+    &__terms
+        color: var(--grey)
+        margin-top: 16px
+        display: flex
+        gap: 1rem
+        &> div
+            &> a
+                text-decoration: none
+                color: var(--dark)
+
+.day
+    &__schedules
+        margin-top: 2rem
+        display: flex
+        justify-content: center
+        align-items: center
+        column-gap: 1.4rem
+        flex-wrap: wrap
+    &__option
+        padding: 1rem
+        border-radius: 2rem
+        display: block
+        width: 46px
+        height: 63px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        background: var(--soft-grey)
+
+.time
+    &__schedules
+        margin-top: 2rem
+        margin-bottom: 2rem 
+        display: flex
+        justify-content: center
+        align-items: center
+        row-gap: 1rem
+        flex-wrap: wrap
+    &__option
+        padding: 1rem
+        border-radius: 2rem
+        display: block
+        width: 101px
+        height: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: var(--soft-grey)
+
+.hr
+    &__generic
+        margin-top: 2rem
+        margin-bottom: 2rem
+        border: 1px solid #E9ECF2
+    &__option
+        padding: 1rem
+
+.dayStatus
+    color: var(--grey)
+    font-size: 16px
+    line-height: 22px
+
+.bookingstepthree
+    padding: 24px
+
+.verification
+    padding: 24px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &__resend
+        text-align: center
+        font-size: 16px
+        line-height: 20px
+        &>span
+            font-weight: 700
+    &__title
+        margin-top: 8px
+        line-height: 30px
+        align-items: center
+    &__paragraph
+        color: var(--grey)
+        margin-top: 8px
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+    &__numbercon
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 1rem
+        margin-top: 37px
+    &__number
+        background: var(--silver)
+        border-radius: 50%
+        display: block
+        width: 56px
+        height: 56px
+        border: none
+        font-size: 20px
+        font-weight: 700
+        padding-left: 23px
+    &__resendcon
+        position: relative
+        margin-top: 50px
+        &> i
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 15px
+            color: var(--grey)
+    &__resend
+        padding: 1rem
+        width: 100%
+        padding-left: 3rem
+
+.verified
+    background: var(--tosca)
+    padding: 24px
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &__title
+        color: var(--white)
+        text-align: center
+        margin-top: 40px
+    &__paragraph
+        color: var(--white)
+        text-align: center
+        margin-top: 8px
+    &__image
+        width: 124px
+        height: 124px
+        display: block
+        margin-left: auto
+        margin-right: auto
+
+.back
+    padding: 24px
+    padding-bottom: 0rem
+    height: 80px
+    display: flex
+    align-items: center
+    text-decoration: none
+    &> i
+        font-size: 1.5rem
+        cursor: pointer
+
+.recovery
+    padding: 24px
+    &__title
+    &__paragraph
+        color: var(--grey)
+        margin-top: 8px
+.smallbutton
+    background: var(--red)
+    text-decoration: none
+    color: #fff
+    font-weight: 700
+    line-height: 18px
+    text-align: center
+    width: 146px
+    padding: 1rem
+    border-radius: 2rem
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 1rem
+    margin-left: auto
+    margin-right: auto
+    margin-top: 10px
+    position: absolute
+    top: 135px
+    left: 50%
+    transform: translateX(-50%)
+
+.home
+    position: relative
+    &__profile
+        position: absolute
+        top: 2rem
+        left: 1rem
+        cursor: pointer
+    &__notification
+        position: absolute
+        top: 2.5rem
+        right: 1rem
+        font-size: 1.5rem
+        color: #fff
+        cursor: pointer
+    &__overlay
+        position: relative
+        background: var(--tosca)
+        width: 100%
+        height: 212px
+        z-index: -1
+        padding: 24px
+    &__elipse
+        position: absolute
+        top: 0
+        z-index: 1
+        left: 50%
+        transform: translateX(-50%)
+    &__elipsebottom
+        position: absolute
+        top: 120px
+    &__welcome
+        position: absolute
+        top: 120px
+        left: 50%
+        transform: translateX(-50%)
+        width: 90%
+        margin-left: auto
+        margin-right: auto
+        padding: 25px
+        height: 169px
+        border-radius: 1rem
+        background: var(--white)
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+    &__paragraph
+        text-align: center
+        text-transform: uppercase
+    &__name
+        text-align: center
+        margin-top: 2px
+    &__treatment
+        text-align: center
+        margin-top: 32px
+.docspot
+    padding: 24px
+    margin-top: 100px
+    &__title
+    &__container
+        margin-top: 24px
+        display: flex
+    &__card
+        width: fit-content
+        display: flex
+        margin-left: auto
+        margin-right: auto
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        &> span
+            margin-top: 14px
+
+.appointment
+    padding: 24px
+    &__date
+        margin-top: 16px
+        color: var(--grey)
+        display: block
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &> a
+            text-decoration: none
+            color: var(--tosca)
+            font-weight: 700
+            font-size: 16px
+            line-height: 20px
+            text-align: center
+    &__footer
+        display: flex
+        gap: 2rem
+        justify-content: center
+        align-items: center
+    &__pending
+        width: 90%
+        background: var(--soft-grey)
+        height: 110px
+        display: block
+        margin-left: auto
+        margin-right: auto
+        margin-top: 16px
+        padding: 12px
+        position: relative
+    &__name
+        font-size: 16px
+        font-weight: 700
+        line-height: 20px
+        color: var(--dark)
+    &__text
+        font-size: 14px
+        font-weight: 400
+        line-height: 22px
+        color: var(--grey)
+    &__icon
+        position: absolute
+        bottom: 0
+        right: 0
+    &__imagecon
+        height: fit-content
+        position: relative
+    &__payment
+        background: var(--grey)
+        color: #fff
+        line-height: 16px
+        font-size: 12px
+        font-weight: 600
+        padding: 0.2rem 0.5rem
+        border-radius: 0.5rem
+        display: block
+        width: 114px
+        margin-top: 1rem
+        margin-left: 60px
+    &__link
+        position: absolute
+        right: 20px
+        top: 50%
+        transform: translateY(-50%)
+        text-decoration: none
+        font-size: 1.2rem
+
+.menu
+    &__item
+        list-style-type: none
+    &__anchor
+        display: block
+        font-size: 1.7rem
+        text-decoration: none
+        color: var(--grey)
+    &__plus
+        background: var(--tosca)
+        color: #fff
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        justify-content: center
+        display: flex
+        align-items: center
+        transition: 0.5s
+        &:hover
+            transition: 0.5s
+            transform: scale(1.1)
+    &-icon
+        color: var(--tosca)
+
+.booking
+    padding: 24px
+    max-height: 100vh
+    position: relative
+    &__title
+    &__step
+        color: var(--cyan)
+        font-size: 16px
+        margin-top: 3px
+        line-height: 30px
+    &__subtitle
+        margin-top: 35px
+    &__article
+        padding: 1rem
+        border-bottom: 1px solid var(--silver)
+    &__selection
+        margin-top: 14px
+
+.no-mg
+    margin-top: 0 !important
+
+.bigbutton
+    display: block
+    padding: 1rem
+    text-decoration: none
+    @include big-button
+    background: var(--tosca)
+    color: var(--white)
+    text-align: center
+    margin-top: 54px
+    border: none
+    width: 100%
+    cursor: pointer
+    &:hover
+        background: var(--cyan)
+
+.frame
+    background: #F8F8FB
+    color: #000
+    border-radius: 2rem
+    border: none
+    padding: 1rem 2rem
+    cursor: pointer
+
+.container
+    &__flex
+        margin-top: 2rem
+        display: flex
+        gap: 1rem
+    &__flexcolumn
+        display: flex
+        flex-direction: column
+        gap: 1rem
+        margin-top: 2rem
+        align-items: start
+
+.appointmenttype
+    display: flex
+    justify-content: space-between
+    alii-items: center
+    width: 100%
+    &__details
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 1rem
+
+.switch
+    --button-width: 3.5em
+    --button-height: 2em
+    --toggle-diameter: 1.5em
+    --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2)
+    --toggle-shadow-offset: 10px
+    --toggle-wider: 3em
+    --color-grey: #cccccc
+    --color-green: #4296f4
+
+.slider
+    width: var(--button-width)
+    height: var(--button-height)
+    background-color: var(--color-grey)
+    border-radius: calc(var(--button-height) / 2)
+    position: relative
+    transition: 0.3s all ease-in-out
+    cursor: pointer
+    display: block
+
+.slider::after
+    content: ""
+    display: inline-block
+    width: var(--toggle-diameter)
+    height: var(--toggle-diameter)
+    background-color: #fff
+    border-radius: calc(var(--toggle-diameter) / 2)
+    position: absolute
+    top: var(--button-toggle-offset)
+    transform: translateX(var(--button-toggle-offset))
+    box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1)
+    transition: 0.3s all ease-in-out
+
+.switch input[type="checkbox"]:checked + .slider
+    background-color: var(--color-green)
+
+.switch input[type="checkbox"]:checked + .slider::after
+    transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)))
+    box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1)
+
+.switch input[type="checkbox"]
+    display: none
+
+.switch input[type="checkbox"]:active + .slider::after
+    width: var(--toggle-wider)
+
+.switch input[type="checkbox"]:checked:active + .slider::after
+    transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)))
+
+.profile
+    padding: 24px
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &> a
+            font-size: 1.5rem
+            text-decoration: none
+    &__info
+        background: var(--tosca)
+        padding: 1rem
+        border-radius: 1rem
+        margin-top: 26px
+    &__general
+        &title
+            margin-top: 24px
+            font-size: 16px
+            line-height: 20px
+            font-weight: 700
+            color: var(--grey)
+
+.profilecard
+    margin-top: 15px
+    padding: 1rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__container
+        display: flex
+        align-items: center
+        gap: 1rem
+    &__details
+    &__title
+        font-size: 14px
+        line-height: 18px
+        font-weight: 700
+        color: var(--dark)
+    &__paragraph
+        font-size: 12px
+        font-weight: 400
+        line-height: 20px
+        color: var(--grey)
+
+.space-between
+    justify-content: space-between
+
+.bookingdetail
+    padding: 24px
+    &__containerflex
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 250px
+    &__container
+        margin-top: 18px
+    &__subtitle
+        margin-top: 18px
+    &__button
+        border: none
+        background: var(--green)
+        color: #fff
+        border-radius: 0.2rem
+        padding: 0.5rem
+        cursor: pointer
+        text-decoration: none
+    &__bigbutton
+        border: none
+        background: var(--tosca)
+        color: #fff
+        border-radius: 0.2rem
+        padding: 0.5rem
+        cursor: pointer
+        text-decoration: none
+        margin-top: 1rem
+        display: block
+        width: 149px
+        height: 36px
+        margin-left: 70px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: 700
+    &__notification
+        margin-top: 1rem
+        display: block
+        padding: 1rem 0rem
+        border-left: 3px solid var(--tosca)
+        padding-left: 1rem
+        &> span
+            padding-left: 2rem
+        &> i
+            color: var(--tosca)
+    &__details
+        margin-top: 1rem
+        padding: 1rem
+        background: var(--soft-grey)
+        border-bottom: 1px solid var(--silver)
+        &> article
+            display: flex
+            align-items: center
+            gap: 1rem
+            &> i
+                font-size: 2.5rem
+                width: 50px
+                display: block
+            &> img
+                width: 40px
+                display: block
+    &__dates
+        &> h3
+        &> div
+            opacity: 0.6
+        &> span
+            font-size: 14px
+            line-height: 22px
+            font-weight: 400
+            margin-top: 2px
+            opacity: 0.6
+    &__buttoncontainer
+        margin-top: 1rem
+
+.help
+    padding: 24px
+    &__answers
+        margin-top: 2rem
+        border-bottom: 1px solid var(--silver)
+        padding: 27px 0rem
+
+.answer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 1rem
+    cursor: pointer
+    &> i
+        font-size: 1.2rem
+        color: var(--grey)
+    &__title
+        font-size: 14px
+        font-weight: 700
+        line-height: 18px
+
+.helpcard
+    border-bottom: 1px solid var(--silver)
+    padding: 1rem
+    &__title
+        font-weight: 700
+        font-size: 16px
+        line-height: 20px
+    &__paragraph
+        margin-top: 12px
+        color: var(--grey)
+        font-size: 14px
+        line-height: 22px
+    &__button
+        margin-top: 1rem
+
+.schedule
+    padding: 24px
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &> a
+            font-size: 1.3rem
+            text-decoration: none
+            color: #000
+    &__time
+        background: var(--soft-grey)
+        width: 100%
+        height: 48px
+        margin-top: 26px
+        border-radius: 2rem
+        padding: 5px
+        display: flex
+        justify-content: center
+        align-items: center
+    &__upcoming
+        border-radius: 2rem
+        width: 50%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        line-height: 18px
+        font-size: 14px
+        cursor: pointer
+    &__past
+        width: 50%
+        height: 100%
+        border-radius: 2rem
+        display: flex
+        justify-content: center
+        line-height: 18px
+        font-size: 14px
+        align-items: center
+        cursor: pointer
+    &__appointmentdates
+        margin-top: 1rem
+    &__appointmentdate
+        margin-top: 1rem
+
+.appointmentdate
+    padding: 16px
+    background: var(--white)
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+    border-radius: 1rem
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__details
+        border-bottom: 1px solid var(--silver)
+        padding-bottom: 16px
+        box-shadow: 0px 40px 100px 0px #EAECF2
+    &__dots
+        color: var(--grey)
+    &__title
+        font-weight: 400
+        font-size: 12px
+        line-height: 16px
+        opacity: 0.6
+        display: block
+    &__date
+        font-size: 12px
+        line-height: 16px
+        font-weight: 600
+        color: var(--dark)
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 0.5rem
+        margin-top: 6px
+    &__docinfocon
+        margin-top: 1rem
+
+.dot
+    width: 5px
+    height: 5px
+    border-radius: 50%
+    background: var(--grey)
+    display: inline-block
+    margin-left: 8px
+    margin-right: 8px
+
+.button
+    &__big
+        padding: 1rem
+        text-decoration: none
+        @include big-button
+        background: var(--tosca)
+        color: var(--white)
+        text-align: center
+        cursor: pointer
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 1rem
+        &:hover
+            background: var(--cyan)
+
+.message
+    padding: 24px
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__icons
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 1.2rem
+        gap: 0.5rem
+        &> a
+            background: var(--silver)
+            color: var(--dark)
+            border-radius: 50%
+            width: 40px
+            height: 40px
+            display: flex
+            justify-content: center
+            align-items: center
+            text-decoration: none
+    &__form
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 34px
+        &> i
+            font-size: 1.2rem
+            background: var(--silver)
+            color: var(--dark)
+            border-radius: 50%
+            width: 40px
+            height: 40px
+            display: flex
+            justify-content: center
+            align-items: center
+            text-decoration: none
+            cursor: pointer
+    &__messages
+        margin-top: 34px
+.messagefrom
+    padding: 1rem
+    border-bottom: 1px solid var(--silver)
+    position: relative
+    &__message
+        display: block
+        margin-left: 4rem
+        color: var(--dark)
+        font-size: 14px
+        line-height: 22px
+        font-weight: 400
+        margin-top: 4px
+    &__time
+        position: absolute
+        top: 10px
+        right: 10px
+        color: var(--grey)
+        font-size: 12px
+        line-height: 16px
+    &__notification
+        background: var(--tosca)
+        padding: 0.3rem 0.5rem
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 10px
+        border-radius: 0.2rem
+        color: var(--white)
+        font-size: 12px
+        line-height: 16px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 0.5rem
+
+.notifications
+    padding: 24px
+    &__header
+        display: flex
+        justify-content: space-around
+        align-items: center
+        border-bottom: 1px solid var(--silver)
+        padding-bottom: 24px
+    &__title
+        font-size: 20px
+        line-height: 28px
+        text-align: center
+        font-weight: 700
+        color: var(--dark)
+    &__close
+        color: var(--red)
+        font-weight: 700
+        font-size: 14px
+        line-height: 18px
+        cursor: pointer
+        text-decoration: none
+    &__subtitle
+        font-size: 16px
+        font-weight: 700
+        line-height: 20px
+        padding: 24px
+        border-bottom: 1px solid var(--silver)
+        border-top: 1px solid var(--silver)
+    &__earlier
+        margin-top: 35px
+
+.notificationearlier
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    padding: 1rem
+    gap: 16px
+    border-bottom: 1px solid var(--silver)
+    &__details
+    &__date
+        display: flex
+        align-items: center
+        font-size: 12px
+        font-weight: 600
+        line-height: 16px
+    &__paragraph
+        font-weight: 400
+        font-size: 14px
+        line-height: 22px
+        color: var(--dark)
+        margin-top: 8px
+
+.waitingroom
+    padding: 12px
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid var(--silver)
+    &__title
+        text-align: center
+    &__video
+        width: 100%
+        aspect-ratio: 16/9
+        height: 200px
+        margin-top: 1rem
+    &__videos
+        margin-top: 1rem
+
+.paymentinfo
+    margin-top: 73px
+    &__subtitle
+        font-size: 16px
+        font-weight: 400
+        line-height: 24px
+    &__article
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 1rem
+    &__container
+        margin-top: 16px
+    &__total
+        font-size: 16px
+        line-height: 20px
+        font-weight: 700
+    &__totalprice
+        font-size: 24px
+        font-weight: 700
+        line-height: 30px
+
+.videocall
+    &__buttons
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 1rem
+        position: absolute
+        bottom: 2rem
+        left: 50%
+        transform: translateX(-50%)
+    &__audio
+        background: var(--tosca)
+        border-radius: 50%
+        border: none
+        width: 50px
+        height: 50px
+        &> i
+            color: var(--white)
+    &__video
+        background: var(--tosca)
+        border-radius: 50%
+        border: none
+        width: 50px
+        height: 50px
+        &> i
+            color: var(--white)
+.mg-top10
+    margin-top: 1rem
+
+.doccard
+    padding: 1rem
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    border-bottom: 1px solid var(--silver)
+    cursor: pointer
+    border: none
+    width: 100%
+    background: var(--white)
+    &:hover
+        background: var(--silver)
+    &__data
+        display: flex
+        align-items: flex-start
+        gap: 1rem
+    &__details
+        text-align: left
+    &__title
+        font-size: 16px
+        font-weight: 700
+        line-height: 20px
+        color: var(--dark)
+    &__profesion
+        color: var(--grey)
+        font-size: 14px
+        line-height: 22px
+        margin-top: 2px
+    &__price
+        font-size: 16px
+        line-height: 20px
+        font-weight: 700
+
+.bottombar
+    width: 134px
+    height: 5px
+    border-radius: 0.5rem
+    background: var(--dark)
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+
+.docicons
+    display: flex
+    gap: 0.5rem
+    margin-top: 4px
+    &__icon
+        font-size: 0.7rem
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        color: #fff
+        background: var(--green)
+        display: flex
+        justify-content: center
+        align-items: center
+
+.show
+    display: block
+.hide
+    display: none
+
+.visittype
+    &__inputs
+        margin-top: 1rem
+    &__radio
+        display: flex
+        align-items: center
+        padding: 20px
+        gap: 1rem
+        border-bottom: 1px solid var(--silver)
+        &> span
+            font-size: 14px
+            line-height: 18px
+            font-weight: 700
+    &__profile
+        border-bottom: 1px solid var(--silver)
+        display: flex
+        align-items: center
+        margin-top: 24px
+    &__card
+        padding-left: 24px
+        padding-right: 24px
+        position: absolute
+        bottom: 0
+        z-index: 2
+        background: var(--white)
+        width: 100%
+        height: 388px
+        border-top-left-radius: 1rem
+        border-top-right-radius: 1rem
+    &__title
+        text-align: center
+        font-size: 20px
+        line-height: 28px
+        font-weight: 700
+        margin-top: 32px
+    &__cancel
+        position: absolute
+        top: 36px
+        right: 20px
+        z-index: 2
+        cursor: pointer
+        font-size: 14px
+        line-height: 18px
+        font-weight: 700
+        color: var(--grey)
+    &__overlay
+        position: absolute
+        z-index: 1
+        top: 0
+        width: 100%
+        height: 100%
+        background: #000
+        opacity: 0.5
