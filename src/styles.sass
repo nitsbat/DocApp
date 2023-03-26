@@ -336,7 +336,7 @@ h3
 .time
     &__schedules
         margin-top: 2rem
-        margin-bottom: 2rem 
+        margin-bottom: 2rem
         display: flex
         justify-content: center
         align-items: center
@@ -360,6 +360,11 @@ h3
         border: 1px solid #E9ECF2
     &__option
         padding: 1rem
+    &__four
+        width: 100%
+        margin-top: 1rem
+        margin-bottom: 2rem
+        border: 1px solid #E9ECF2
 
 .dayStatus
     color: var(--grey)
@@ -367,6 +372,9 @@ h3
     line-height: 22px
 
 .bookingstepthree
+    padding: 24px
+
+.bookingstepfour
     padding: 24px
 
 .verification
@@ -1334,3 +1342,33 @@ h3
         height: 100%
         background: #000
         opacity: 0.5
+
+.bookingfour
+    padding: 24px
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &> img
+            margin-left: 105px
+            cursor: pointer
+            &:hover
+                transition: 0.5s
+                transform: scale(1.1)
+        &> a
+            text-decoration: none
+            color: var(--tosca)
+            font-weight: 700
+            font-size: 16px
+            line-height: 20px
+            text-align: center
+    &__tile
+        padding-top: 2rem
+    &__content
+        border-bottom: 1px solid var(--silver)
+        cursor: pointer
+        border: none
+        width: 100%
+        background: var(--white)
+        &:hover
+            background: var(--silver)

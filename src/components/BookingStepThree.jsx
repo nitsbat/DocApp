@@ -14,15 +14,14 @@ const BookingStepThree = ({ stepState, stepNumber }) => {
 
   return (
     <>
+      <section className='back' onClick={handleBack}>
+        <i className='fa-solid fa-chevron-left' />
+      </section>
+      <section className='booking'>
+        <h3 className='booking__title'>Booking Appointment</h3>
+        <span className='booking__step'>Step {stepNumber}</span>
+      </section>
       <section className='bookingstepthree'>
-
-        <section className='back' onClick={handleBack}>
-          <i className='fa-solid fa-chevron-left' />
-        </section>
-        <section className='booking'>
-          <h3 className='booking__title'>Booking Appointment</h3>
-          <span className='booking__step'>Step {stepNumber}</span>
-        </section>
         <h3 className='booking__subtitle'>Select Schedule</h3>
         <section className='day__schedules'>
           <Day day='M' date='7' />
@@ -56,7 +55,6 @@ const BookingStepThree = ({ stepState, stepNumber }) => {
         </section>
         <button onClick={handleStep} className='bigbutton'>Continue</button>
       </section>
-
     </>
   )
 }
