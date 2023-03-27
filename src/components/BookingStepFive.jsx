@@ -15,7 +15,6 @@ const BookingStepFive = ({ stepState, stepNumber }) => {
   }
 
   const onChangeValue = (e) => {
-    console.log(e.target.value)
     if (e.target.value === 'card') {
       setCard(true)
       setInsurance(false)
@@ -54,7 +53,7 @@ const BookingStepFive = ({ stepState, stepNumber }) => {
             insurance ? <Insurance /> : null
           }
         </div>
-        <button onClick={handleStep} className='bigbutton no-mg'>Continue</button>
+        <button onClick={handleStep} className='bigbutton'>Continue</button>
       </section>
     </>
   )
