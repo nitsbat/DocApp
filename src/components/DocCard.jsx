@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
 import DocIcons from './DocIcons'
 import profile from '../images/profile.svg'
-import greenTick from '../images/greenTick.svg'
 import BookingContext from '../context/BookingContext'
 
 const DocCard = ({ showState, title, profesion, price, phoneIcon, videoIcon, checkIcon }) => {
@@ -19,7 +18,7 @@ const DocCard = ({ showState, title, profesion, price, phoneIcon, videoIcon, che
       <button onClick={handleDoctor} className='doccard'>
         <section className='doccard__data'>
 
-          <img src={show === true ? greenTick : profile} alt='' />
+          <img src={profile} alt='' />
 
           <article className='doccard__details'>
 

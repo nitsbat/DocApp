@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
 import icon from '../images/plus-circle.svg'
 import InputForm from './InputForm'
+import greenTick from '../images/greenTick.svg'
 
 const BookingStepFour = ({ stepState, stepNumber }) => {
   const diseases = ['Appendictis', 'Backache', 'Bone Fracture', 'Cold', 'Constipation', 'Cough', 'Diarrohea', 'Dizzy']
   const [step, setStep] = stepState
   const [show, setShow] = useState(false)
+  const [selectedOption, setSelectedOption] = useState(false)
+
   const handleBack = () => {
     setStep(step - 1)
   }
   const handleStep = () => {
     setStep(step + 1)
   }
-
   return (
     <>
       <section className='back' onClick={handleBack}>
@@ -32,7 +34,14 @@ const BookingStepFour = ({ stepState, stepNumber }) => {
         <div className='bookingfour__tile'>
           {Object.values(diseases).map((disease) => (
             <div className='bookingfour__content' key={disease.id}>
-              <label>{disease}</label>
+              <button onClick={() => setSelectedOption(disease)}>
+                <label style={selectedOption === disease ? { fontWeight: '700', display: 'flex', flexDirection: 'row' } : null}>
+                  {disease}
+                  {
+                    selectedOption === disease ? <img src={greenTick} alt='' style={{ marginLeft: '80%' }} /> : null
+                  }
+                </label>
+              </button>
               <hr className='hr__four' />
             </div>
           ))}
