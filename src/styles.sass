@@ -319,7 +319,7 @@ h3
         display: flex
         justify-content: center
         align-items: center
-        column-gap: 1.4rem
+        column-gap: 0.5rem
         flex-wrap: wrap
     &__option
         padding: 1rem
@@ -364,6 +364,12 @@ h3
         width: 100%
         margin-top: 1rem
         margin-bottom: 2rem
+        border: 1px solid #E9ECF2
+    &__summary
+        width: 85%
+        margin-top: 1rem
+        margin-bottom: 2rem
+        margin-left: 2rem
         border: 1px solid #E9ECF2
 
 .dayStatus
@@ -1349,6 +1355,13 @@ h3
         display: flex
         justify-content: space-between
         align-items: center
+        font-family: Urbanist
+        font-size: 16px
+        font-weight: 700
+        line-height: 20px
+        letter-spacing: 0px
+        text-align: left
+
         &> img
             margin-left: 105px
             cursor: pointer
@@ -1419,3 +1432,67 @@ h3
         color: #191A26
     &__image
         cursor: 'pointer'
+
+.bigbutton__summary
+    display: block
+    padding: 1rem
+    text-decoration: none
+    @include big-button
+    background: var(--tosca)
+    color: var(--white)
+    text-align: center
+    margin-left: 5%
+    margin-top: 10px
+    border: none
+    width: 90%
+    cursor: pointer
+    &:hover
+        background: var(--cyan)
+
+.summary
+    display: flex
+    flex-direction: column
+    &__tile
+        display: flex
+        flex-direction: row
+        margin-left: 3rem
+    &__tile_l
+        display: flex
+        flex-direction: row
+        margin-left: 3.5rem
+    &__label
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        margin-left: 2rem
+        font-family: Urbanist
+    &__contents
+        color: #726767
+        fontWeight: 400
+    &__highlight_g
+        margin: 5px
+        background: #E8FFEE
+        width: 65px
+        color: green
+        fontWeight: 400
+    &__footer
+        display: flex
+        flex-direction: row
+        margin-top: 5rem
+        margin-left: 5%
+    &__price
+        font-weight: 700
+        font-size: 24px
+        margin-left: 65%
+        line-height: 30px
+
+.success
+    margin-top: 1rem
+    width: 287px
+    height: 92px
+    background: rgba(255, 192, 70, 0.1)
+    border: 1px solid #FFC046
+    border-radius: 8px
+    text-align: center
+    font-size: 15px
+    line-height: 22px
