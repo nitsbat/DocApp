@@ -41,7 +41,7 @@ const Insurance = () => {
         </div>
       </div>
       <div className='insurance__tile'>
-        <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '1rem'}}>
+        <div style={{ display: 'flex', flexDirection: 'row', marginLeft: '1rem' }}>
           <img src={front} style={{ cursor: 'pointer' }} alt='' />
           <img src={back} style={{ marginLeft: '1rem', cursor: 'pointer' }} alt='' />
         </div>
