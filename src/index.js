@@ -27,6 +27,11 @@ import EnterWaitingRoom from './components/EnterWaitingRoom'
 import VerifyNumber from './components/VerifyNumber'
 import BottomBar from './components/BottomBar'
 import PasswordChanged from './components/PasswordChanged'
+import AccountInformation from './components/AccountInformation'
+import InsuranceDetail from './components/InsuranceDetail'
+import ClinicInfo from './components/ClinicInfo'
+import MedicalRecords from './components/MedicalRecords'
+import Settings from './components/Settings'
 
 const router = createBrowserRouter([
   {
@@ -108,6 +113,36 @@ const router = createBrowserRouter([
     element: [
       <Back key={1} />,
       <Profile key={2} />
+    ]
+  },
+  {
+    path: '/account-info',
+    element: [
+      <AccountInformation key={2} />
+    ]
+  },
+  {
+    path: '/insurance-detail',
+    element: [
+      <InsuranceDetail key={2} />
+    ]
+  },
+  {
+    path: '/clinic-info',
+    element: [
+      <ClinicInfo key={2} />
+    ]
+  },
+  {
+    path: '/medical-records',
+    element: [
+      <MedicalRecords key={2} />
+    ]
+  },
+  {
+    path: '/settings',
+    element: [
+      <Settings key={2} />
     ]
   },
   {

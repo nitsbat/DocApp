@@ -4,7 +4,12 @@ const Day = ({ white, checked, day = 'M', date = '7', name = 'scheduleOption', d
   const [selectedOption, setSelectedOption] = useState(true)
 
   const handleOptionChange = (e) => {
-    setSelectedOption(e.target.value)
+    const selectedDay = e.target.value
+    if (selectedOption === selectedDay) {
+      setSelectedOption(null)
+    } else {
+      setSelectedOption(e.target.value)
+    }
   }
   return (
     <>

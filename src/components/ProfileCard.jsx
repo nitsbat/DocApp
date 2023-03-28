@@ -1,7 +1,32 @@
 import React from 'react'
 import profileicon from '../images/profileicon.svg'
+import { useNavigate } from 'react-router-dom'
 
 const ProfileCard = ({ title, paragraph }) => {
+  const navigate = useNavigate()
+  const onClickHandle = () => {
+    switch (title) {
+      case 'Account Information':
+        navigate('/account-info')
+        break
+      case 'Insurance Detail':
+        navigate('/insurance-detail')
+        break
+      case 'Medical Records':
+        navigate('/medical-records')
+        break
+      case 'Clinic Info':
+        navigate('/clinic-info')
+        break
+      case 'Settings':
+        navigate('/settings')
+        break
+      default:
+        navigate('/home')
+        break
+    }
+  }
+
   return (
     <>
       <section className='profilecard'>
@@ -12,7 +37,7 @@ const ProfileCard = ({ title, paragraph }) => {
             <p className='profilecard__paragraph'>{paragraph}</p>
           </article>
         </section>
-        <i className='fa-solid fa-chevron-right' />
+        <button onClick={onClickHandle} style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}><i className='fa-solid fa-chevron-right' /></button>
       </section>
     </>
   )
