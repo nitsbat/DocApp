@@ -31,7 +31,7 @@ const BookingSuccessfull = ({ stepState, stepNumber }) => {
         </section>
       </section>
       <img style={{ marginTop: '6rem', marginLeft: '5%', width: '90%', cursor: 'pointer' }} src={calendar} alt='' />
-      <button onClick={handleStep} className='bigbutton__summary'>Pay Now</button>
+      <button onClick={handleStep} className='bigbutton__summary'>Go To Home</button>
     </>
   )
 }

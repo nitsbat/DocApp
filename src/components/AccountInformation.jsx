@@ -1,15 +1,12 @@
-import { useNavigate } from 'react-router-dom'
-import editIcon from '../images/edit-button.svg'
+import { useState } from 'react'
+import AccountDetail from './AccountDetail'
+import EditAccount from './EditAccount'
 
 const AccountInformation = () => {
-  const navigate = useNavigate()
+  const [editAccount, setEditAccount] = useState(false)
   return (
     <>
-      <section className='profile__back'>
-        <i onClick={() => navigate('/profile')} className='fa-solid fa-chevron-left' />
-        <h4 className='booking__title'>Account Information</h4>
-        <img src={editIcon} alt='' style={{ marginLeft: '20%' }} />
-      </section>
+      {editAccount ? <EditAccount editState={[editAccount, setEditAccount]} /> : <AccountDetail editState={[editAccount, setEditAccount]} />}
     </>
   )
 }
