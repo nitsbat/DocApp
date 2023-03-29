@@ -1,7 +1,7 @@
 import Home from './components/Home'
 import './styles.sass'
 
-function App() {
+function App () {
   return (
     <>
       <Home />
