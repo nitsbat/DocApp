@@ -1640,3 +1640,65 @@ h3
 .edit_input_radio
     &_second
         margin-left: 10%
+
+.insurance-detail
+    width: 335px
+    height: 190px
+    margin-left: 2rem
+    margin-top: 2rem
+    background: #FFFFFF
+    box-shadow: 0px 10px 100px #E3E5EE
+    border-radius: 12px
+    display: flex
+    flex-direction: column
+    &__header
+        padding: 2rem
+        display: flex
+        flex-direction: row
+    &__title
+        font-family: Urbanist
+        font-size: 16px
+        font-weight: 700
+        line-height: 20px
+        letter-spacing: 0px
+        text-align: left
+
+    &__footer
+        display: flex
+        flex-direction: row
+        margin-top: 3rem
+        &__label
+            display: flex
+            flex-direction: column
+            margin-left: 1rem
+    &__name
+        font-family: Urbanist
+        font-size: 20px
+        font-weight: 700
+        line-height: 28px
+        letter-spacing: 0px
+        text-align: left
+    &__number
+        font-family: Urbanist
+        font-size: 14px
+        font-weight: 400
+        line-height: 22px
+        letter-spacing: 0px
+        text-align: left
+
+    
+.bigbutton__summary_insurance
+    display: block
+    padding: 1rem
+    text-decoration: none
+    @include big-button
+    background: var(--tosca)
+    color: var(--white)
+    text-align: center
+    margin-left: 5%
+    margin-top: 60%
+    border: none
+    width: 90%
+    cursor: pointer
+    &:hover
+        background: var(--cyan)
