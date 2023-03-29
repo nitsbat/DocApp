@@ -365,6 +365,10 @@ h3
         margin-top: 1rem
         margin-bottom: 2rem
         border: 1px solid #E9ECF2
+    &__setting
+        width: 100%
+        margin-top: 1rem
+        border: 1px solid #E9ECF2
     &__summary
         width: 85%
         margin-top: 1rem
@@ -1686,7 +1690,6 @@ h3
         letter-spacing: 0px
         text-align: left
 
-    
 .bigbutton__summary_insurance
     display: block
     padding: 1rem
@@ -1702,3 +1705,89 @@ h3
     cursor: pointer
     &:hover
         background: var(--cyan)
+
+.clinical__info
+    margin-left: 24px
+    margin-top: 24px
+    border-radius: 8px
+
+.clinic
+    &__tiles
+        display: flex
+        flex-direction: column
+    &__info_name
+        margin-left: 2rem
+        display: flex
+    &__info_name_labels
+        margin-left: 2rem
+        display: flex
+        flex-direction: column
+    &__label_upper    //styleName: Paragraph;
+        font-family: 'Urbanist'
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 22px
+        display: flex
+        align-items: center
+        color: #808D9E
+    &__label_lower    //styleName: Paragraph;
+        font-family: 'Urbanist'
+        font-style: normal
+        font-weight: 700
+        font-size: 14px
+        line-height: 18px
+        display: flex
+        align-items: center
+        color: #1D1E25
+
+.settings_logout
+    margin-left: 40%
+    background: #F8F8FB
+    border: none
+    font-family: 'Urbanist'
+    font-style: normal
+    font-weight: 700
+    font-size: 16px
+    line-height: 18px
+    color: #ED2828
+    cursor: pointer
+
+.med_main
+    display: flex
+    margin-left: 1rem
+    margin-top: 2rem
+    &_col
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+    &_row
+        display: flex
+        justify-content: space-between
+    &_date
+        margin: 2px
+        font-family: 'Urbanist'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        display: flex
+        align-items: center
+        color: #808D9E
+
+.med_box
+    &_1
+        margin-top: 1rem
+        width: 140px
+        height: 122px
+        background: #F8F8FB
+        border-radius: 8px
+        cursor: pointer
+    &_2
+        width: 140px
+        height: 122px
+        background: #F8F8FB
+        border-radius: 8px
+        margin-top: 1rem
+        margin-left: 1rem
+        cursor: pointer

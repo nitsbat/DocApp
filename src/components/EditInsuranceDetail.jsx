@@ -1,7 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import date from '../images/date-picker.svg'
-import flag from '../images/flag.svg'
-import mail from '../images/mail.svg'
 
 const EditInsuranceDetail = ({ editState }) => {
   const [editAccount, setEditAccount] = editState
