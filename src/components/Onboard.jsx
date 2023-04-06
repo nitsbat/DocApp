@@ -7,7 +7,9 @@ import Splash from './Splash'
 
 const Onboard = () => {
   const [isOnboarded, setIsOnboarded] = useState(false)
+
   useEffect(() => {
+    alert('This is a mobile app and should be tested in Responsive Design Mode from your Developer tools (right click -> Inspect)')
     setTimeout(() => {
       setIsOnboarded(true)
     }, 1000)
@@ -28,11 +30,10 @@ const Onboard = () => {
             </article>
             <a href='/getstarted' className='onboard__next'><i className='fa-solid fa-arrow-right' /></a>
           </section>
-
-          )
+        )
         : (
           <Splash />
-          )}
+        )}
     </>
   )
 }
